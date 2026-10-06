@@ -1,0 +1,1301 @@
+{
+  "currency": "USD",
+  "details": {
+    "alibaba/qwen-image-3.0-pro.image-1k": {
+      "label": "Output up to 2.25 MP (1K, 1.5K)",
+      "model": "Qwen-Image 3.0 Pro",
+      "provider": "alibaba",
+      "unit": "perImage"
+    },
+    "alibaba/qwen-image-3.0-pro.image-2k": {
+      "label": "Output above 2.25 MP (2K)",
+      "model": "Qwen-Image 3.0 Pro",
+      "provider": "alibaba",
+      "unit": "perImage"
+    },
+    "alibaba/qwen-image-3.0-pro.input-image": {
+      "label": "Each input image",
+      "model": "Qwen-Image 3.0 Pro",
+      "provider": "alibaba",
+      "unit": "perImage"
+    },
+    "alibaba/wan-2.7-image-pro.image": {
+      "label": "Per image",
+      "model": "Wan 2.7 Image Pro",
+      "provider": "alibaba",
+      "unit": "perImage"
+    },
+    "alibaba/wan-2.7-image.image": {
+      "label": "Per image",
+      "model": "Wan 2.7 Image",
+      "provider": "alibaba",
+      "unit": "perImage"
+    },
+    "alibaba/wan-2.7.1080p": {
+      "label": "1080p (with sound)",
+      "model": "Wan 2.7",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/wan-2.7.720p": {
+      "label": "720p (with sound)",
+      "model": "Wan 2.7",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/wan-3.0-prime.1080p": {
+      "label": "1080p",
+      "model": "Wan 3.0 Prime",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/wan-3.0-prime.480p": {
+      "label": "480p",
+      "model": "Wan 3.0 Prime",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/wan-3.0-prime.720p": {
+      "label": "720p",
+      "model": "Wan 3.0 Prime",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/wan-3.0.1080p": {
+      "label": "1080p",
+      "model": "Wan 3.0",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/wan-3.0.480p": {
+      "label": "480p",
+      "model": "Wan 3.0",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/wan-3.0.720p": {
+      "label": "720p",
+      "model": "Wan 3.0",
+      "provider": "alibaba",
+      "unit": "perSecond"
+    },
+    "alibaba/z-image-turbo.image": {
+      "label": "Per image",
+      "model": "Z-Image Turbo",
+      "provider": "alibaba",
+      "unit": "perImage"
+    },
+    "alibaba/z-image-turbo.image-rewritten": {
+      "label": "Per image with Prompt Rewriting",
+      "model": "Z-Image Turbo",
+      "provider": "alibaba",
+      "unit": "perImage"
+    },
+    "bfl.credit": {
+      "label": "Credit (converts reported costs)",
+      "provider": "bfl",
+      "unit": "perCredit"
+    },
+    "bfl/flux-2-flex.extra-mp": {
+      "label": "Each further megapixel (output or reference input)",
+      "model": "FLUX.2 [flex]",
+      "provider": "bfl",
+      "unit": "perUnit"
+    },
+    "bfl/flux-2-flex.first-mp": {
+      "label": "First output megapixel",
+      "model": "FLUX.2 [flex]",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-2-max.extra-mp": {
+      "label": "Each further megapixel (output or reference input)",
+      "model": "FLUX.2 [max]",
+      "provider": "bfl",
+      "unit": "perUnit"
+    },
+    "bfl/flux-2-max.first-mp": {
+      "label": "First output megapixel",
+      "model": "FLUX.2 [max]",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-2-pro.extra-mp": {
+      "label": "Each further megapixel (output or reference input)",
+      "model": "FLUX.2 [pro]",
+      "provider": "bfl",
+      "unit": "perUnit"
+    },
+    "bfl/flux-2-pro.first-mp": {
+      "label": "First output megapixel",
+      "model": "FLUX.2 [pro]",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-3-image.1.5k": {
+      "label": "1.5K (\u22482.25 MP)",
+      "model": "FLUX 3 Image",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-3-image.1k": {
+      "label": "1K (\u22481 MP)",
+      "model": "FLUX 3 Image",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-3-image.2k": {
+      "label": "2K (\u22484 MP)",
+      "model": "FLUX 3 Image",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-3-image.4k": {
+      "label": "4K (\u224816 MP)",
+      "model": "FLUX 3 Image",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-3-image.768sq": {
+      "label": "768 (\u22480.6 MP)",
+      "model": "FLUX 3 Image",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-3-video.draft": {
+      "label": "Draft (720p preview)",
+      "model": "FLUX 3 Video",
+      "provider": "bfl",
+      "unit": "perSecond"
+    },
+    "bfl/flux-3-video.fhd": {
+      "label": "1080p",
+      "model": "FLUX 3 Video",
+      "provider": "bfl",
+      "unit": "perSecond"
+    },
+    "bfl/flux-3-video.hd": {
+      "label": "720p",
+      "model": "FLUX 3 Video",
+      "provider": "bfl",
+      "unit": "perSecond"
+    },
+    "bfl/flux-3-video.qhd": {
+      "label": "1440p",
+      "model": "FLUX 3 Video",
+      "provider": "bfl",
+      "unit": "perSecond"
+    },
+    "bfl/flux-3-video.uhd": {
+      "label": "4K",
+      "model": "FLUX 3 Video",
+      "provider": "bfl",
+      "unit": "perSecond"
+    },
+    "bfl/flux-kontext-max.image": {
+      "label": "Per image",
+      "model": "FLUX.1 Kontext [max]",
+      "provider": "bfl",
+      "unit": "perImage"
+    },
+    "bfl/flux-video-upscale.creative": {
+      "label": "Creative, per output megapixel-second",
+      "model": "FLUX Video Upscale",
+      "provider": "bfl",
+      "unit": "perMegapixel"
+    },
+    "bfl/flux-video-upscale.precise": {
+      "label": "Precise, per output megapixel-second",
+      "model": "FLUX Video Upscale",
+      "provider": "bfl",
+      "unit": "perMegapixel"
+    },
+    "byteplus/seedance-1.0-pro.tokens": {
+      "label": "All resolutions",
+      "model": "Seedance 1.0 Pro",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0-fast.720p": {
+      "label": "480p / 720p",
+      "model": "Seedance 2.0 Fast",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0-fast.720p-video": {
+      "label": "480p / 720p with video input",
+      "model": "Seedance 2.0 Fast",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0-mini.720p": {
+      "label": "480p / 720p",
+      "model": "Seedance 2.0 Mini",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0-mini.720p-video": {
+      "label": "480p / 720p with video input",
+      "model": "Seedance 2.0 Mini",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0.1080p": {
+      "label": "1080p",
+      "model": "Seedance 2.0",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0.1080p-video": {
+      "label": "1080p with video input",
+      "model": "Seedance 2.0",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0.4k": {
+      "label": "4K",
+      "model": "Seedance 2.0",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0.4k-video": {
+      "label": "4K with video input",
+      "model": "Seedance 2.0",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0.720p": {
+      "label": "480p / 720p",
+      "model": "Seedance 2.0",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.0.720p-video": {
+      "label": "480p / 720p with video input",
+      "model": "Seedance 2.0",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.5.1080p": {
+      "label": "1080p",
+      "model": "Seedance 2.5",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.5.1080p-video": {
+      "label": "1080p with video input",
+      "model": "Seedance 2.5",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.5.720p": {
+      "label": "480p / 720p",
+      "model": "Seedance 2.5",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedance-2.5.720p-video": {
+      "label": "480p / 720p with video input",
+      "model": "Seedance 2.5",
+      "provider": "byteplus",
+      "unit": "perMillionTokens"
+    },
+    "byteplus/seedream-4.5.image": {
+      "label": "Per image",
+      "model": "Seedream 4.5",
+      "provider": "byteplus",
+      "unit": "perImage"
+    },
+    "byteplus/seedream-5.0-flash.image": {
+      "label": "Per image",
+      "model": "Seedream 5.0 Flash",
+      "provider": "byteplus",
+      "unit": "perImage"
+    },
+    "byteplus/seedream-5.0-lite.image": {
+      "label": "Per image",
+      "model": "Seedream 5.0 Lite",
+      "provider": "byteplus",
+      "unit": "perImage"
+    },
+    "byteplus/seedream-5.0-pro.extra-input": {
+      "label": "Each input image after the first",
+      "model": "Seedream 5.0 Pro",
+      "provider": "byteplus",
+      "unit": "perImage"
+    },
+    "byteplus/seedream-5.0-pro.image": {
+      "label": "Up to 2.61 MP (1K, 1.5K)",
+      "model": "Seedream 5.0 Pro",
+      "provider": "byteplus",
+      "unit": "perImage"
+    },
+    "byteplus/seedream-5.0-pro.image-large": {
+      "label": "Above 2.61 MP (2K)",
+      "model": "Seedream 5.0 Pro",
+      "provider": "byteplus",
+      "unit": "perImage"
+    },
+    "fal/bytedance-video-upscaler.1080p": {
+      "label": "1080p, Fast or Standard (30 fps)",
+      "model": "ByteDance Video Upscale (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/bytedance-video-upscaler.2k": {
+      "label": "2K, Fast or Standard (30 fps)",
+      "model": "ByteDance Video Upscale (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/bytedance-video-upscaler.4k": {
+      "label": "4K, Fast or Standard (30 fps)",
+      "model": "ByteDance Video Upscale (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/bytedance-video-upscaler.pro-1080p": {
+      "label": "1080p, Pro (30 fps)",
+      "model": "ByteDance Video Upscale (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/bytedance-video-upscaler.pro-2k": {
+      "label": "2K, Pro (30 fps)",
+      "model": "ByteDance Video Upscale (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/bytedance-video-upscaler.pro-4k": {
+      "label": "4K, Pro (30 fps)",
+      "model": "ByteDance Video Upscale (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/film.gpu-second": {
+      "label": "Per second of GPU time",
+      "model": "FILM Frame Interpolation",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/rife.gpu-second": {
+      "label": "Per second of GPU time",
+      "model": "RIFE Frame Interpolation",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/seedvr2-image.mp": {
+      "label": "Per megapixel",
+      "model": "SeedVR2 Upscale",
+      "provider": "fal",
+      "unit": "perMegapixel"
+    },
+    "fal/seedvr2-video.mp": {
+      "label": "Per megapixel of output video (width \u00d7 height \u00d7 frames)",
+      "model": "SeedVR2 Video Upscale",
+      "provider": "fal",
+      "unit": "perMegapixel"
+    },
+    "fal/topaz-bloom.2mp": {
+      "label": "Per started 2 MP of output",
+      "model": "Topaz Bloom (fal)",
+      "provider": "fal",
+      "unit": "perUnit"
+    },
+    "fal/topaz-generative.4mp": {
+      "label": "Other models: per started 4 MP of output",
+      "model": "Topaz Generative (fal)",
+      "provider": "fal",
+      "unit": "perUnit"
+    },
+    "fal/topaz-generative.wonder": {
+      "label": "Wonder 3 or 3.5: per started 8 MP of output",
+      "model": "Topaz Generative (fal)",
+      "provider": "fal",
+      "unit": "perUnit"
+    },
+    "fal/topaz-interpolate.1080p": {
+      "label": "Apollo or Chronos up to 1080p, per second of 30 \u2192 60 fps",
+      "model": "Topaz Frame Interpolation (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-interpolate.4k": {
+      "label": "Apollo or Chronos at 4K, per second of 30 \u2192 60 fps",
+      "model": "Topaz Frame Interpolation (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-interpolate.aion-1080p": {
+      "label": "Aion up to 1080p, per second of 30 \u2192 60 fps",
+      "model": "Topaz Frame Interpolation (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-interpolate.aion-4k": {
+      "label": "Aion at 4K, per second of 30 \u2192 60 fps",
+      "model": "Topaz Frame Interpolation (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-precision.24mp": {
+      "label": "Per started 24 MP of output",
+      "model": "Topaz Precision (fal)",
+      "provider": "fal",
+      "unit": "perUnit"
+    },
+    "fal/topaz-starlight.1080p": {
+      "label": "Precise 2.6, HQ, Mini or Sharp, up to 1080p (30 fps)",
+      "model": "Topaz Starlight (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-starlight.4k": {
+      "label": "Precise 2.6, HQ, Mini or Sharp, 4K (30 fps)",
+      "model": "Topaz Starlight (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-starlight.fast-1080p": {
+      "label": "Fast 2, up to 1080p (30 fps)",
+      "model": "Topaz Starlight (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-starlight.fast-4k": {
+      "label": "Fast 2, 4K (30 fps)",
+      "model": "Topaz Starlight (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
+    "fal/topaz-video-precision.1080p": {
+      "label": "1080p output, per minute (30 fps)",
+      "model": "Topaz Video Precision (fal)",
+      "provider": "fal",
+      "unit": "perMinute"
+    },
+    "fal/topaz-video-precision.4k": {
+      "label": "4K output, per minute (30 fps)",
+      "model": "Topaz Video Precision (fal)",
+      "provider": "fal",
+      "unit": "perMinute"
+    },
+    "fal/topaz-video-precision.720p": {
+      "label": "720p output, per minute (30 fps)",
+      "model": "Topaz Video Precision (fal)",
+      "provider": "fal",
+      "unit": "perMinute"
+    },
+    "google/gemini-omni-flash.input": {
+      "label": "Input tokens",
+      "model": "Gemini Omni Flash",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/gemini-omni-flash.text-output": {
+      "label": "Text and thinking tokens",
+      "model": "Gemini Omni Flash",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/gemini-omni-flash.video-output": {
+      "label": "Video output tokens (5,792 per second at 720p)",
+      "model": "Gemini Omni Flash",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2-lite.image-output": {
+      "label": "Image output tokens",
+      "model": "Nano Banana 2 Lite",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2-lite.input": {
+      "label": "Input tokens (text + references)",
+      "model": "Nano Banana 2 Lite",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2-lite.text-output": {
+      "label": "Text and thinking output tokens",
+      "model": "Nano Banana 2 Lite",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2.image-output": {
+      "label": "Image output tokens",
+      "model": "Nano Banana 2",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2.input": {
+      "label": "Input tokens (text + references)",
+      "model": "Nano Banana 2",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2.text-output": {
+      "label": "Text and thinking output tokens",
+      "model": "Nano Banana 2",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-pro.image-output": {
+      "label": "Image output tokens",
+      "model": "Nano Banana Pro",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-pro.input": {
+      "label": "Input tokens (text + references)",
+      "model": "Nano Banana Pro",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-pro.text-output": {
+      "label": "Text and thinking output tokens",
+      "model": "Nano Banana Pro",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "kling.image-unit": {
+      "label": "Image unit (converts reported usage)",
+      "provider": "kling",
+      "unit": "perUnit"
+    },
+    "kling.video-unit": {
+      "label": "Video unit (converts reported usage)",
+      "provider": "kling",
+      "unit": "perUnit"
+    },
+    "kling/kling-2.5-turbo.1080p": {
+      "label": "1080p",
+      "model": "Kling 2.5 Turbo",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-2.5-turbo.720p": {
+      "label": "720p",
+      "model": "Kling 2.5 Turbo",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-2.6.1080p": {
+      "label": "1080p, silent",
+      "model": "Kling 2.6",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-2.6.1080p-audio": {
+      "label": "1080p, with audio",
+      "model": "Kling 2.6",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-2.6.720p": {
+      "label": "720p, silent",
+      "model": "Kling 2.6",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0-omni.1080p": {
+      "label": "1080p, silent",
+      "model": "Kling 3.0 Omni",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0-omni.1080p-audio": {
+      "label": "1080p, with audio",
+      "model": "Kling 3.0 Omni",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0-omni.4k": {
+      "label": "4K",
+      "model": "Kling 3.0 Omni",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0-omni.720p": {
+      "label": "720p, silent",
+      "model": "Kling 3.0 Omni",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0-omni.720p-audio": {
+      "label": "720p, with audio",
+      "model": "Kling 3.0 Omni",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0-turbo.1080p": {
+      "label": "1080p (audio included)",
+      "model": "Kling 3.0 Turbo",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0-turbo.720p": {
+      "label": "720p (audio included)",
+      "model": "Kling 3.0 Turbo",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0.1080p": {
+      "label": "1080p, silent",
+      "model": "Kling 3.0",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0.1080p-audio": {
+      "label": "1080p, with audio",
+      "model": "Kling 3.0",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0.4k": {
+      "label": "4K",
+      "model": "Kling 3.0",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0.720p": {
+      "label": "720p, silent",
+      "model": "Kling 3.0",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-3.0.720p-audio": {
+      "label": "720p, with audio",
+      "model": "Kling 3.0",
+      "provider": "kling",
+      "unit": "perSecond"
+    },
+    "kling/kling-image-3.0-omni.image": {
+      "label": "1K / 2K",
+      "model": "Kling Image 3.0 Omni",
+      "provider": "kling",
+      "unit": "perImage"
+    },
+    "kling/kling-image-3.0-omni.image-4k": {
+      "label": "4K",
+      "model": "Kling Image 3.0 Omni",
+      "provider": "kling",
+      "unit": "perImage"
+    },
+    "kling/kling-image-3.0.image": {
+      "label": "Per image",
+      "model": "Kling Image 3.0",
+      "provider": "kling",
+      "unit": "perImage"
+    },
+    "kling/kling-image-o1.image": {
+      "label": "Per image",
+      "model": "Kling O1 Image",
+      "provider": "kling",
+      "unit": "perImage"
+    },
+    "mediakit/fps-boost.minute": {
+      "label": "Per output minute at 720p, up to 30 fps",
+      "model": "ByteDance FPS Boost",
+      "provider": "mediakit",
+      "unit": "perMinute"
+    },
+    "mediakit/image-upscale.max": {
+      "label": "Max",
+      "model": "ByteDance Image Upscale",
+      "provider": "mediakit",
+      "unit": "perImage"
+    },
+    "mediakit/image-upscale.professional": {
+      "label": "Professional",
+      "model": "ByteDance Image Upscale",
+      "provider": "mediakit",
+      "unit": "perImage"
+    },
+    "mediakit/image-upscale.standard": {
+      "label": "Standard",
+      "model": "ByteDance Image Upscale",
+      "provider": "mediakit",
+      "unit": "perImage"
+    },
+    "mediakit/video-upscale-fast.minute": {
+      "label": "Per output minute at 720p, up to 30 fps",
+      "model": "ByteDance Video Upscale Fast",
+      "provider": "mediakit",
+      "unit": "perMinute"
+    },
+    "mediakit/video-upscale.professional": {
+      "label": "Professional: per output minute at 720p, up to 30 fps",
+      "model": "ByteDance Video Upscale",
+      "provider": "mediakit",
+      "unit": "perMinute"
+    },
+    "mediakit/video-upscale.standard": {
+      "label": "Standard: per output minute at 720p, up to 30 fps",
+      "model": "ByteDance Video Upscale",
+      "provider": "mediakit",
+      "unit": "perMinute"
+    },
+    "minimax/h3-max.480p": {
+      "label": "480p output",
+      "model": "MiniMax H3 Max",
+      "provider": "minimax",
+      "unit": "perSecond"
+    },
+    "minimax/h3-max.768p": {
+      "label": "768p output",
+      "model": "MiniMax H3 Max",
+      "provider": "minimax",
+      "unit": "perSecond"
+    },
+    "minimax/h3-max.extra-image": {
+      "label": "Each reference image beyond 2",
+      "model": "MiniMax H3 Max",
+      "provider": "minimax",
+      "unit": "perImage"
+    },
+    "minimax/h3-max.input-video-480p": {
+      "label": "Input video at 480p",
+      "model": "MiniMax H3 Max",
+      "provider": "minimax",
+      "unit": "perSecond"
+    },
+    "minimax/h3-max.input-video-768p": {
+      "label": "Input video at 768p",
+      "model": "MiniMax H3 Max",
+      "provider": "minimax",
+      "unit": "perSecond"
+    },
+    "minimax/h3.2k": {
+      "label": "2K output",
+      "model": "MiniMax H3",
+      "provider": "minimax",
+      "unit": "perSecond"
+    },
+    "minimax/h3.768p": {
+      "label": "768p output",
+      "model": "MiniMax H3",
+      "provider": "minimax",
+      "unit": "perSecond"
+    },
+    "minimax/h3.extra-image": {
+      "label": "Each reference image beyond 5",
+      "model": "MiniMax H3",
+      "provider": "minimax",
+      "unit": "perImage"
+    },
+    "minimax/hailuo-02.1080p-6s": {
+      "label": "1080p, 6s",
+      "model": "Hailuo 02",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-02.512p-10s": {
+      "label": "512p, 10s",
+      "model": "Hailuo 02",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-02.512p-6s": {
+      "label": "512p, 6s",
+      "model": "Hailuo 02",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-02.768p-10s": {
+      "label": "768p, 10s",
+      "model": "Hailuo 02",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-02.768p-6s": {
+      "label": "768p, 6s",
+      "model": "Hailuo 02",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-2.3-fast.1080p-6s": {
+      "label": "1080p, 6s",
+      "model": "Hailuo 2.3 Fast",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-2.3-fast.768p-10s": {
+      "label": "768p, 10s",
+      "model": "Hailuo 2.3 Fast",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-2.3-fast.768p-6s": {
+      "label": "768p, 6s",
+      "model": "Hailuo 2.3 Fast",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-2.3.1080p-6s": {
+      "label": "1080p, 6s",
+      "model": "Hailuo 2.3",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-2.3.768p-10s": {
+      "label": "768p, 10s",
+      "model": "Hailuo 2.3",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/hailuo-2.3.768p-6s": {
+      "label": "768p, 6s",
+      "model": "Hailuo 2.3",
+      "provider": "minimax",
+      "unit": "perVideo"
+    },
+    "minimax/image-01.image": {
+      "label": "Per image",
+      "model": "MiniMax Image-01",
+      "provider": "minimax",
+      "unit": "perImage"
+    },
+    "openai/gpt-image-2.5-flare.image-input": {
+      "label": "Image input tokens (references)",
+      "model": "GPT Image 2.5 Flare",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.5-flare.image-output": {
+      "label": "Image output tokens",
+      "model": "GPT Image 2.5 Flare",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.5-flare.text-input": {
+      "label": "Text input tokens",
+      "model": "GPT Image 2.5 Flare",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.5-sunburst.image-input": {
+      "label": "Image input tokens (references)",
+      "model": "GPT Image 2.5 Sunburst",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.5-sunburst.image-output": {
+      "label": "Image output tokens",
+      "model": "GPT Image 2.5 Sunburst",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.5-sunburst.text-input": {
+      "label": "Text input tokens",
+      "model": "GPT Image 2.5 Sunburst",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.image-input": {
+      "label": "Image input tokens (references)",
+      "model": "GPT Image 2",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.image-output": {
+      "label": "Image output tokens",
+      "model": "GPT Image 2",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "openai/gpt-image-2.text-input": {
+      "label": "Text input tokens",
+      "model": "GPT Image 2",
+      "provider": "openai",
+      "unit": "perMillionTokens"
+    },
+    "recraft.credit": {
+      "label": "API unit (converts reported charges)",
+      "provider": "recraft",
+      "unit": "perCredit"
+    },
+    "recraft/creative-upscale.image": {
+      "label": "Per upscale",
+      "model": "Recraft Creative Upscale",
+      "provider": "recraft",
+      "unit": "perImage"
+    },
+    "recraft/crisp-upscale.image": {
+      "label": "Per upscale",
+      "model": "Recraft Crisp Upscale",
+      "provider": "recraft",
+      "unit": "perImage"
+    },
+    "recraft/v4.1-flash.image": {
+      "label": "Per image",
+      "model": "Recraft V4.1 Flash",
+      "provider": "recraft",
+      "unit": "perImage"
+    },
+    "recraft/v4.1-vector.image": {
+      "label": "Vector (Standard or Utility)",
+      "model": "Recraft V4.1 Vector",
+      "provider": "recraft",
+      "unit": "perImage"
+    },
+    "recraft/v4.1-vector.image-pro": {
+      "label": "Pro vector (Standard or Utility)",
+      "model": "Recraft V4.1 Vector",
+      "provider": "recraft",
+      "unit": "perImage"
+    },
+    "recraft/v4.1.image": {
+      "label": "1K (Standard or Utility)",
+      "model": "Recraft V4.1",
+      "provider": "recraft",
+      "unit": "perImage"
+    },
+    "recraft/v4.1.image-pro": {
+      "label": "2K Pro (Standard or Utility)",
+      "model": "Recraft V4.1",
+      "provider": "recraft",
+      "unit": "perImage"
+    },
+    "stability.credit": {
+      "label": "Credit (converts your balance)",
+      "provider": "stability",
+      "unit": "perCredit"
+    },
+    "stability/conservative-upscale.image": {
+      "label": "Per upscale (40 credits)",
+      "model": "Stable Conservative Upscale",
+      "provider": "stability",
+      "unit": "perImage"
+    },
+    "stability/creative-upscale.image": {
+      "label": "Per upscale (60 credits)",
+      "model": "Stable Creative Upscale",
+      "provider": "stability",
+      "unit": "perImage"
+    },
+    "stability/fast-upscale.image": {
+      "label": "Per upscale (2 credits)",
+      "model": "Stable Fast Upscale",
+      "provider": "stability",
+      "unit": "perImage"
+    },
+    "topaz.credit": {
+      "label": "Credit (Developer plan price for extra credits; $0.08 on Scale)",
+      "provider": "topaz",
+      "unit": "perCredit"
+    },
+    "xai/grok-imagine-image-2.0.input-image": {
+      "label": "Input image (edits)",
+      "model": "Grok Imagine Image 2.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image-2.0.low-1.5k": {
+      "label": "1.5K, low quality",
+      "model": "Grok Imagine Image 2.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image-2.0.low-1k": {
+      "label": "1K, low quality",
+      "model": "Grok Imagine Image 2.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image-2.0.low-2k": {
+      "label": "2K, low quality",
+      "model": "Grok Imagine Image 2.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image-2.0.medium-1.5k": {
+      "label": "1.5K, medium quality",
+      "model": "Grok Imagine Image 2.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image-2.0.medium-1k": {
+      "label": "1K, medium quality",
+      "model": "Grok Imagine Image 2.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image-2.0.medium-2k": {
+      "label": "2K, medium quality",
+      "model": "Grok Imagine Image 2.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image.1k": {
+      "label": "1K",
+      "model": "Grok Imagine Image 1.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image.2k": {
+      "label": "2K",
+      "model": "Grok Imagine Image 1.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-image.input-image": {
+      "label": "Input image (edits)",
+      "model": "Grok Imagine Image 1.0",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-video-1.5-lite.1080p": {
+      "label": "1080p",
+      "model": "Grok Imagine Video 1.5 Lite",
+      "provider": "xai",
+      "unit": "perSecond"
+    },
+    "xai/grok-imagine-video-1.5-lite.480p": {
+      "label": "480p",
+      "model": "Grok Imagine Video 1.5 Lite",
+      "provider": "xai",
+      "unit": "perSecond"
+    },
+    "xai/grok-imagine-video-1.5-lite.720p": {
+      "label": "720p",
+      "model": "Grok Imagine Video 1.5 Lite",
+      "provider": "xai",
+      "unit": "perSecond"
+    },
+    "xai/grok-imagine-video-1.5-lite.input-image": {
+      "label": "Input image (frame or reference)",
+      "model": "Grok Imagine Video 1.5 Lite",
+      "provider": "xai",
+      "unit": "perImage"
+    },
+    "xai/grok-imagine-video-1.5.1080p": {
+      "label": "1080p",
+      "model": "Grok Imagine Video 1.5",
+      "provider": "xai",
+      "unit": "perSecond"
+    },
+    "xai/grok-imagine-video-1.5.480p": {
+      "label": "480p",
+      "model": "Grok Imagine Video 1.5",
+      "provider": "xai",
+      "unit": "perSecond"
+    },
+    "xai/grok-imagine-video-1.5.720p": {
+      "label": "720p",
+      "model": "Grok Imagine Video 1.5",
+      "provider": "xai",
+      "unit": "perSecond"
+    },
+    "xai/grok-imagine-video-1.5.input-image": {
+      "label": "Input image (frame or reference)",
+      "model": "Grok Imagine Video 1.5",
+      "provider": "xai",
+      "unit": "perImage"
+    }
+  },
+  "pricingPages": {
+    "alibaba": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+    "bfl": "https://bfl.ai/pricing",
+    "byteplus": "https://docs.byteplus.com/en/docs/modelark/model-pricing",
+    "fal": "https://fal.ai/pricing",
+    "google": "https://ai.google.dev/gemini-api/docs/pricing",
+    "kling": "https://kling.ai/dev/pricing",
+    "magnific": "https://www.magnific.com/api/pricing",
+    "mediakit": "https://docs.byteplus.com/en/docs/byteplus-vod/ai-mediakit-pricing",
+    "minimax": "https://platform.minimax.io/docs/guides/pricing-paygo",
+    "openai": "https://developers.openai.com/api/docs/pricing",
+    "recraft": "https://www.recraft.ai/docs/api-reference/pricing",
+    "stability": "https://platform.stability.ai/pricing",
+    "topaz": "https://www.topazlabs.com/enhance-api",
+    "xai": "https://docs.x.ai/developers/pricing"
+  },
+  "rates": {
+    "alibaba/qwen-image-3.0-pro.image-1k": 0.04,
+    "alibaba/qwen-image-3.0-pro.image-2k": 0.075,
+    "alibaba/qwen-image-3.0-pro.input-image": 0.003,
+    "alibaba/wan-2.7-image-pro.image": 0.075,
+    "alibaba/wan-2.7-image.image": 0.03,
+    "alibaba/wan-2.7.1080p": 0.15,
+    "alibaba/wan-2.7.720p": 0.1,
+    "alibaba/wan-3.0-prime.1080p": 0.28,
+    "alibaba/wan-3.0-prime.480p": 0.068,
+    "alibaba/wan-3.0-prime.720p": 0.14,
+    "alibaba/wan-3.0.1080p": 0.2,
+    "alibaba/wan-3.0.480p": 0.05,
+    "alibaba/wan-3.0.720p": 0.1,
+    "alibaba/z-image-turbo.image": 0.015,
+    "alibaba/z-image-turbo.image-rewritten": 0.03,
+    "bfl.credit": 0.01,
+    "bfl/flux-2-flex.extra-mp": 0.05,
+    "bfl/flux-2-flex.first-mp": 0.05,
+    "bfl/flux-2-max.extra-mp": 0.03,
+    "bfl/flux-2-max.first-mp": 0.07,
+    "bfl/flux-2-pro.extra-mp": 0.015,
+    "bfl/flux-2-pro.first-mp": 0.03,
+    "bfl/flux-3-image.1.5k": 0.07,
+    "bfl/flux-3-image.1k": 0.048,
+    "bfl/flux-3-image.2k": 0.1,
+    "bfl/flux-3-image.4k": 0.607,
+    "bfl/flux-3-image.768sq": 0.041,
+    "bfl/flux-3-video.draft": 0.06,
+    "bfl/flux-3-video.fhd": 0.29,
+    "bfl/flux-3-video.hd": 0.17,
+    "bfl/flux-3-video.qhd": 0.4,
+    "bfl/flux-3-video.uhd": 0.8,
+    "bfl/flux-kontext-max.image": 0.08,
+    "bfl/flux-video-upscale.creative": 0.1,
+    "bfl/flux-video-upscale.precise": 0.07,
+    "byteplus/seedance-1.0-pro.tokens": 2.5,
+    "byteplus/seedance-2.0-fast.720p": 5.6,
+    "byteplus/seedance-2.0-fast.720p-video": 3.3,
+    "byteplus/seedance-2.0-mini.720p": 3.5,
+    "byteplus/seedance-2.0-mini.720p-video": 2.1,
+    "byteplus/seedance-2.0.1080p": 7.7,
+    "byteplus/seedance-2.0.1080p-video": 4.7,
+    "byteplus/seedance-2.0.4k": 4,
+    "byteplus/seedance-2.0.4k-video": 2.4,
+    "byteplus/seedance-2.0.720p": 7,
+    "byteplus/seedance-2.0.720p-video": 4.3,
+    "byteplus/seedance-2.5.1080p": 11.7,
+    "byteplus/seedance-2.5.1080p-video": 7,
+    "byteplus/seedance-2.5.720p": 10.7,
+    "byteplus/seedance-2.5.720p-video": 6.4,
+    "byteplus/seedream-4.5.image": 0.04,
+    "byteplus/seedream-5.0-flash.image": 0.018,
+    "byteplus/seedream-5.0-lite.image": 0.035,
+    "byteplus/seedream-5.0-pro.extra-input": 0.003,
+    "byteplus/seedream-5.0-pro.image": 0.045,
+    "byteplus/seedream-5.0-pro.image-large": 0.09,
+    "fal/bytedance-video-upscaler.1080p": 0.0072,
+    "fal/bytedance-video-upscaler.2k": 0.0144,
+    "fal/bytedance-video-upscaler.4k": 0.0288,
+    "fal/bytedance-video-upscaler.pro-1080p": 0.072,
+    "fal/bytedance-video-upscaler.pro-2k": 0.144,
+    "fal/bytedance-video-upscaler.pro-4k": 0.288,
+    "fal/film.gpu-second": 0.0013,
+    "fal/rife.gpu-second": 0.0013,
+    "fal/seedvr2-image.mp": 0.001,
+    "fal/seedvr2-video.mp": 0.001,
+    "fal/topaz-bloom.2mp": 0.08,
+    "fal/topaz-generative.4mp": 0.08,
+    "fal/topaz-generative.wonder": 0.08,
+    "fal/topaz-interpolate.1080p": 0.03,
+    "fal/topaz-interpolate.4k": 0.06,
+    "fal/topaz-interpolate.aion-1080p": 0.05,
+    "fal/topaz-interpolate.aion-4k": 0.17,
+    "fal/topaz-precision.24mp": 0.08,
+    "fal/topaz-starlight.1080p": 0.12,
+    "fal/topaz-starlight.4k": 0.26,
+    "fal/topaz-starlight.fast-1080p": 0.06,
+    "fal/topaz-starlight.fast-4k": 0.13,
+    "fal/topaz-video-precision.1080p": 0.76,
+    "fal/topaz-video-precision.4k": 3.02,
+    "fal/topaz-video-precision.720p": 0.34,
+    "google/gemini-omni-flash.input": 1.5,
+    "google/gemini-omni-flash.text-output": 9,
+    "google/gemini-omni-flash.video-output": 17.5,
+    "google/nano-banana-2-lite.image-output": 30,
+    "google/nano-banana-2-lite.input": 0.25,
+    "google/nano-banana-2-lite.text-output": 1.5,
+    "google/nano-banana-2.image-output": 60,
+    "google/nano-banana-2.input": 0.5,
+    "google/nano-banana-2.text-output": 3,
+    "google/nano-banana-pro.image-output": 120,
+    "google/nano-banana-pro.input": 2,
+    "google/nano-banana-pro.text-output": 12,
+    "kling.image-unit": 0.0035,
+    "kling.video-unit": 0.14,
+    "kling/kling-2.5-turbo.1080p": 0.07,
+    "kling/kling-2.5-turbo.720p": 0.042,
+    "kling/kling-2.6.1080p": 0.07,
+    "kling/kling-2.6.1080p-audio": 0.14,
+    "kling/kling-2.6.720p": 0.042,
+    "kling/kling-3.0-omni.1080p": 0.112,
+    "kling/kling-3.0-omni.1080p-audio": 0.14,
+    "kling/kling-3.0-omni.4k": 0.42,
+    "kling/kling-3.0-omni.720p": 0.084,
+    "kling/kling-3.0-omni.720p-audio": 0.112,
+    "kling/kling-3.0-turbo.1080p": 0.14,
+    "kling/kling-3.0-turbo.720p": 0.112,
+    "kling/kling-3.0.1080p": 0.112,
+    "kling/kling-3.0.1080p-audio": 0.168,
+    "kling/kling-3.0.4k": 0.42,
+    "kling/kling-3.0.720p": 0.084,
+    "kling/kling-3.0.720p-audio": 0.126,
+    "kling/kling-image-3.0-omni.image": 0.028,
+    "kling/kling-image-3.0-omni.image-4k": 0.056,
+    "kling/kling-image-3.0.image": 0.028,
+    "kling/kling-image-o1.image": 0.028,
+    "mediakit/fps-boost.minute": 0.15,
+    "mediakit/image-upscale.max": 0.04,
+    "mediakit/image-upscale.professional": 0.006,
+    "mediakit/image-upscale.standard": 0.001,
+    "mediakit/video-upscale-fast.minute": 0.1033,
+    "mediakit/video-upscale.professional": 2.0661,
+    "mediakit/video-upscale.standard": 0.2066,
+    "minimax/h3-max.480p": 0.05,
+    "minimax/h3-max.768p": 0.08,
+    "minimax/h3-max.extra-image": 0.074,
+    "minimax/h3-max.input-video-480p": 0.0553,
+    "minimax/h3-max.input-video-768p": 0.143,
+    "minimax/h3.2k": 0.13,
+    "minimax/h3.768p": 0.08,
+    "minimax/h3.extra-image": 0.04,
+    "minimax/hailuo-02.1080p-6s": 0.49,
+    "minimax/hailuo-02.512p-10s": 0.15,
+    "minimax/hailuo-02.512p-6s": 0.1,
+    "minimax/hailuo-02.768p-10s": 0.56,
+    "minimax/hailuo-02.768p-6s": 0.28,
+    "minimax/hailuo-2.3-fast.1080p-6s": 0.33,
+    "minimax/hailuo-2.3-fast.768p-10s": 0.32,
+    "minimax/hailuo-2.3-fast.768p-6s": 0.19,
+    "minimax/hailuo-2.3.1080p-6s": 0.49,
+    "minimax/hailuo-2.3.768p-10s": 0.56,
+    "minimax/hailuo-2.3.768p-6s": 0.28,
+    "minimax/image-01.image": 0.0035,
+    "openai/gpt-image-2.5-flare.image-input": 8,
+    "openai/gpt-image-2.5-flare.image-output": 30,
+    "openai/gpt-image-2.5-flare.text-input": 5,
+    "openai/gpt-image-2.5-sunburst.image-input": 8,
+    "openai/gpt-image-2.5-sunburst.image-output": 30,
+    "openai/gpt-image-2.5-sunburst.text-input": 5,
+    "openai/gpt-image-2.image-input": 8,
+    "openai/gpt-image-2.image-output": 30,
+    "openai/gpt-image-2.text-input": 5,
+    "recraft.credit": 0.001,
+    "recraft/creative-upscale.image": 0.25,
+    "recraft/crisp-upscale.image": 0.004,
+    "recraft/v4.1-flash.image": 0.007,
+    "recraft/v4.1-vector.image": 0.08,
+    "recraft/v4.1-vector.image-pro": 0.3,
+    "recraft/v4.1.image": 0.035,
+    "recraft/v4.1.image-pro": 0.21,
+    "stability.credit": 0.01,
+    "stability/conservative-upscale.image": 0.4,
+    "stability/creative-upscale.image": 0.6,
+    "stability/fast-upscale.image": 0.02,
+    "topaz.credit": 0.1,
+    "xai/grok-imagine-image-2.0.input-image": 0.01,
+    "xai/grok-imagine-image-2.0.low-1.5k": 0.05,
+    "xai/grok-imagine-image-2.0.low-1k": 0.04,
+    "xai/grok-imagine-image-2.0.low-2k": 0.06,
+    "xai/grok-imagine-image-2.0.medium-1.5k": 0.07,
+    "xai/grok-imagine-image-2.0.medium-1k": 0.06,
+    "xai/grok-imagine-image-2.0.medium-2k": 0.08,
+    "xai/grok-imagine-image.1k": 0.02,
+    "xai/grok-imagine-image.2k": 0.02,
+    "xai/grok-imagine-image.input-image": 0.002,
+    "xai/grok-imagine-video-1.5-lite.1080p": 0.14,
+    "xai/grok-imagine-video-1.5-lite.480p": 0.02,
+    "xai/grok-imagine-video-1.5-lite.720p": 0.03,
+    "xai/grok-imagine-video-1.5-lite.input-image": 0.01,
+    "xai/grok-imagine-video-1.5.1080p": 0.25,
+    "xai/grok-imagine-video-1.5.480p": 0.08,
+    "xai/grok-imagine-video-1.5.720p": 0.14,
+    "xai/grok-imagine-video-1.5.input-image": 0.01
+  },
+  "source": "Official pricing pages of each provider",
+  "updatedAt": "2026-10-06T05:33:42Z",
+  "version": "2026-10-06"
+}

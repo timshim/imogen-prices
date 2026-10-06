@@ -1,0 +1,76 @@
+name: Update prices
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC. Provider prices change rarely; the app checks daily.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check prices against the providers' official pricing pages
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: >-
+            --allowedTools "WebFetch,WebSearch,Read,Edit,Write"
+          prompt: |
+            You maintain prices.json, the price list the Imogen Mac app uses to estimate and
+            record what AI image and video generations cost. Today's date is in the runner's
+            clock; use UTC.
+
+            Each entry in `rates` is a price in US dollars. `details` says what each rate is
+            (label, unit, provider, model) and `pricingPages` lists each provider's official
+            pricing page.
+
+            Do this:
+            1. For each provider in `pricingPages`, read its official pricing page (and the
+               provider's own docs if the page links to them). Use only official provider
+               sources, never resellers, blogs or aggregators.
+            2. For every rate of that provider, find the current published price for exactly
+               what the label and unit describe (same resolution, tier, audio on/off, per
+               second vs per image, and so on). Convert to US dollars per the unit given.
+            3. Change a rate only when the official source clearly states a different price.
+               If you can't find or verify a price, leave it unchanged. Never guess, and never
+               add, remove or rename rates or change `details` or `pricingPages`.
+            4. Set `updatedAt` to the current time in ISO 8601 UTC (for example
+               2026-10-13T06:00:00Z), since every price has now been checked. If any rate
+               changed, also set `version` to today's date (YYYY-MM-DD).
+            5. Keep the file's formatting: 2-space indentation and sorted keys.
+            6. Write update-summary.md: a first line under 70 characters, a blank line, then
+               one line per changed rate ("id: old -> new, source URL"), or "No price changes"
+               if nothing changed, plus any prices you couldn't verify.
+
+            Edit only prices.json and update-summary.md.
+
+      - name: Validate the price list
+        run: python3 scripts/validate.py
+
+      - name: Publish
+        run: |
+          if git diff --quiet -- prices.json; then
+            echo "Nothing to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prices.json
+          if [ -f update-summary.md ]; then
+            git commit -F update-summary.md
+          else
+            git commit -m "Update prices"
+          fi
+          git push
