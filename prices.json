@@ -1214,9 +1214,9 @@
     "fal/topaz-starlight.4k-60fps": 0.51,
     "fal/topaz-starlight.fast-1080p": 0.06,
     "fal/topaz-starlight.fast-4k": 0.13,
-    "fal/topaz-video-precision.1080p": 0.76,
-    "fal/topaz-video-precision.4k": 3.02,
-    "fal/topaz-video-precision.720p": 0.34,
+    "fal/topaz-video-precision.1080p": 0.8,
+    "fal/topaz-video-precision.4k": 3.1,
+    "fal/topaz-video-precision.720p": 0.4,
     "google/gemini-omni-flash.input": 1.5,
     "google/gemini-omni-flash.text-output": 9,
     "google/gemini-omni-flash.video-output": 17.5,
@@ -1324,6 +1324,6 @@
     "xai/grok-imagine-video-1.5.input-image": 0.01
   },
   "source": "Official pricing pages of each provider",
-  "updatedAt": "2026-10-07T12:00:00Z",
-  "version": "2026-10-06"
+  "updatedAt": "2026-10-07T15:04:21Z",
+  "version": "2026-10-07"
 }
