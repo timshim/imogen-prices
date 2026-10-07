@@ -37,7 +37,7 @@ jobs:
           # the Claude GitHub App, which this repo doesn't need.
           github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: >-
-            --allowedTools "WebFetch,WebSearch,Read,Edit,Write"
+            --allowedTools "WebFetch,WebSearch,Read,Grep,Glob,Edit,Write"
           prompt: |
             You maintain prices.json, the price list the Imogen Pro Mac app uses to estimate and
             record what AI image and video generations cost.
@@ -50,7 +50,7 @@ jobs:
 
             Do this:
             1. For each provider with rates, read sources/<provider>.txt. The files can be long:
-               read them in parts until you've seen every section. If they don't settle a rate,
+               read them in parts, or search them with Grep (for example for a model name or "$"). If they don't settle a rate,
                you may use WebFetch or WebSearch, but only on the provider's own official pages,
                never resellers, blogs or aggregators.
             2. For every rate of that provider, find the current published price for exactly
