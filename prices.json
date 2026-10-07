@@ -456,6 +456,12 @@
       "provider": "fal",
       "unit": "perSecond"
     },
+    "fal/topaz-starlight.4k-60fps": {
+      "label": "Precise 2.6, HQ, Mini or Sharp, 4K (60 fps)",
+      "model": "Topaz Starlight (fal)",
+      "provider": "fal",
+      "unit": "perSecond"
+    },
     "fal/topaz-starlight.fast-1080p": {
       "label": "Fast 2, up to 1080p (30 fps)",
       "model": "Topaz Starlight (fal)",
@@ -1187,6 +1193,7 @@
     "fal/topaz-precision.24mp": 0.08,
     "fal/topaz-starlight.1080p": 0.12,
     "fal/topaz-starlight.4k": 0.26,
+    "fal/topaz-starlight.4k-60fps": 0.51,
     "fal/topaz-starlight.fast-1080p": 0.06,
     "fal/topaz-starlight.fast-4k": 0.13,
     "fal/topaz-video-precision.1080p": 0.76,

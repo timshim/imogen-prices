@@ -5,6 +5,10 @@ on:
     # Every Monday at 06:00 UTC. Provider prices change rarely; the app checks daily.
     - cron: "0 6 * * 1"
   workflow_dispatch:
+  # A hand edit to prices.json is published straight away (the `publish` job).
+  push:
+    branches: [main]
+    paths: [prices.json]
 
 permissions:
   contents: write
@@ -15,6 +19,7 @@ concurrency:
 
 jobs:
   update:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -28,7 +33,7 @@ jobs:
           claude_args: >-
             --allowedTools "WebFetch,WebSearch,Read,Edit,Write"
           prompt: |
-            You maintain prices.json, the price list the Imogen Mac app uses to estimate and
+            You maintain prices.json, the price list the Imogen Pro Mac app uses to estimate and
             record what AI image and video generations cost. Today's date is in the runner's
             clock; use UTC.
 
@@ -59,10 +64,12 @@ jobs:
       - name: Validate the price list
         run: python3 scripts/validate.py
 
-      - name: Publish
+      - name: Commit
+        id: commit
         run: |
           if git diff --quiet -- prices.json; then
             echo "Nothing to publish."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -74,3 +81,27 @@ jobs:
             git commit -m "Update prices"
           fi
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # The app reads https://imogenpro.com/catalog/prices.json, not this repo. (A push made with
+      # the workflow's token doesn't start the `publish` job, so this job uploads its own commit.)
+      - name: Upload to imogenpro.com
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          CATALOG_DEPLOY_KEY: ${{ secrets.CATALOG_DEPLOY_KEY }}
+        run: scripts/upload.sh
+
+  publish:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate the price list
+        run: python3 scripts/validate.py
+
+      - name: Upload to imogenpro.com
+        env:
+          CATALOG_DEPLOY_KEY: ${{ secrets.CATALOG_DEPLOY_KEY }}
+        run: scripts/upload.sh
