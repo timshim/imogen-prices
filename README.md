@@ -17,11 +17,19 @@ Costs already recorded in a project never change when this list does.
 
 A scheduled workflow (`.github/workflows/update-prices.yml`) runs every Monday:
 
-1. Claude reads each provider's official pricing page and updates any rate whose published price
-   changed. It only edits `prices.json`.
-2. `scripts/validate.py` rejects malformed lists, added or removed rates, and implausible jumps.
-3. The workflow commits the result and uploads it to imogenpro.com (`scripts/upload.sh`), then
-   checks the site serves the new file.
+1. `scripts/fetch_sources.py` downloads each provider's official pricing pages, listed in
+   `sources.json`, and saves them as text. These are plain downloads without JavaScript, so a
+   page belongs in `sources.json` only if its prices are in the HTML.
+2. Claude reads those pages and updates any rate whose published price changed. It writes
+   `check-result.json`, listing which providers it confirmed, and a summary of what it changed
+   or couldn't confirm.
+3. `scripts/stamp.py` sets the dates. A changed rate moves `updatedAt` to now and `version` to
+   today. With no changes, `updatedAt` only moves when every provider was confirmed, so
+   "Prices as of …" in the app never claims a check that didn't happen.
+4. `scripts/validate.py` rejects malformed lists, added or removed rates, and implausible jumps.
+5. The workflow commits the result and uploads it to imogenpro.com (`scripts/upload.sh`), then
+   checks the site serves the new file. The run's summary in the Actions tab shows what was
+   changed and what couldn't be confirmed.
 
 A hand edit to `prices.json` pushed to `main` is validated and uploaded the same way. You can also
 run the weekly check from the Actions tab (**Update prices → Run workflow**).
@@ -36,4 +44,7 @@ Repository secrets:
 New rates (for new models) come from Imogen Pro itself:
 `"/Applications/Imogen Pro.app/Contents/MacOS/Imogen Pro" --export-prices -` prints the full list
 from the app's built-in rates. Add the new rate IDs and their `details` here by hand: the weekly
-run's validator rejects added or removed rates.
+run's validator rejects added or removed rates. If the provider is new, add its pricing pages to
+`sources.json` too.
+
+Tests: `python3 -m unittest discover -s tests`.

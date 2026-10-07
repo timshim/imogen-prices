@@ -25,6 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Download the official pricing pages
+        run: python3 scripts/fetch_sources.py
+
       - name: Check prices against the providers' official pricing pages
         uses: anthropics/claude-code-action@v1
         with:
@@ -37,32 +40,38 @@ jobs:
             --allowedTools "WebFetch,WebSearch,Read,Edit,Write"
           prompt: |
             You maintain prices.json, the price list the Imogen Pro Mac app uses to estimate and
-            record what AI image and video generations cost. Today's date is in the runner's
-            clock; use UTC.
+            record what AI image and video generations cost.
 
-            Each entry in `rates` is a price in US dollars. `details` says what each rate is
-            (label, unit, provider, model) and `pricingPages` lists each provider's official
-            pricing page.
+            Each entry in `rates` is a price in US dollars, keyed by rate ID; the part before the
+            first "/" or "." is the provider. `details` says what each rate is (label, unit,
+            provider, model). The workflow has already downloaded each provider's official pricing
+            pages as text into sources/<provider>.txt (the URLs are in sources.json). Each page
+            starts with a "=== URL ===" line; one that says FAILED couldn't be downloaded.
 
             Do this:
-            1. For each provider in `pricingPages`, read its official pricing page (and the
-               provider's own docs if the page links to them). Use only official provider
-               sources, never resellers, blogs or aggregators.
+            1. For each provider with rates, read sources/<provider>.txt. The files can be long:
+               read them in parts until you've seen every section. If they don't settle a rate,
+               you may use WebFetch or WebSearch, but only on the provider's own official pages,
+               never resellers, blogs or aggregators.
             2. For every rate of that provider, find the current published price for exactly
                what the label and unit describe (same resolution, tier, audio on/off, per
                second vs per image, and so on). Convert to US dollars per the unit given.
-            3. Change a rate only when the official source clearly states a different price.
-               If you can't find or verify a price, leave it unchanged. Never guess, and never
-               add, remove or rename rates or change `details` or `pricingPages`.
-            4. Set `updatedAt` to the current time in ISO 8601 UTC (for example
-               2026-10-13T06:00:00Z), since every price has now been checked. If any rate
-               changed, also set `version` to today's date (YYYY-MM-DD).
-            5. Keep the file's formatting: 2-space indentation and sorted keys.
+            3. Change a rate only when an official source clearly states a different price.
+               If you can't find or verify a price, leave it unchanged. Never guess. Never add,
+               remove or rename rates, and never change `details`, `pricingPages`, `updatedAt`
+               or `version` (a later step sets the dates from your results).
+            4. Keep the file's formatting: 2-space indentation and sorted keys.
+            5. Write check-result.json as {"verified": [...], "unverified": [...]} with provider
+               names. A provider is verified only if you confirmed every one of its rates
+               against an official source in this run; otherwise it's unverified.
             6. Write update-summary.md: a first line under 70 characters, a blank line, then
                one line per changed rate ("id: old -> new, source URL"), or "No price changes"
-               if nothing changed, plus any prices you couldn't verify.
+               if nothing changed, then each unverified provider or rate and why.
 
-            Edit only prices.json and update-summary.md.
+            Edit only prices.json, check-result.json and update-summary.md.
+
+      - name: Set the check date
+        run: python3 scripts/stamp.py
 
       - name: Validate the price list
         run: python3 scripts/validate.py

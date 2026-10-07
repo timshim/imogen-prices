@@ -1,0 +1,41 @@
+{
+  "alibaba": [
+    "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+  ],
+  "bfl": [
+    "https://bfl.ai/pricing"
+  ],
+  "byteplus": [
+    "https://docs.byteplus.com/en/docs/modelark/model-pricing"
+  ],
+  "fal": [
+    "https://fal.ai/pricing"
+  ],
+  "google": [
+    "https://ai.google.dev/gemini-api/docs/pricing"
+  ],
+  "kling": [
+    "https://kling.ai/dev/pricing"
+  ],
+  "mediakit": [
+    "https://docs.byteplus.com/en/docs/byteplus-vod/ai-mediakit-pricing"
+  ],
+  "minimax": [
+    "https://platform.minimax.io/docs/guides/pricing-paygo"
+  ],
+  "openai": [
+    "https://developers.openai.com/api/docs/pricing"
+  ],
+  "recraft": [
+    "https://www.recraft.ai/docs/api-reference/pricing"
+  ],
+  "stability": [
+    "https://platform.stability.ai/pricing"
+  ],
+  "topaz": [
+    "https://www.topazlabs.com/enhance-api"
+  ],
+  "xai": [
+    "https://docs.x.ai/developers/pricing"
+  ]
+}
