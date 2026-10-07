@@ -24,6 +24,9 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Claude reads files in this checkout, so keep the token out of .git/config.
+          persist-credentials: false
 
       - name: Download the official pricing pages
         run: python3 scripts/fetch_sources.py
@@ -37,7 +40,7 @@ jobs:
           # the Claude GitHub App, which this repo doesn't need.
           github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: >-
-            --allowedTools "WebFetch,WebSearch,Read,Grep,Glob,Edit,Write"
+            --allowedTools "WebFetch,WebSearch,Read,Grep,Glob,Edit,Write,Bash(cat:*),Bash(grep:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*)"
           prompt: |
             You maintain prices.json, the price list the Imogen Pro Mac app uses to estimate and
             record what AI image and video generations cost.
@@ -47,6 +50,10 @@ jobs:
             provider, model). The workflow has already downloaded each provider's official pricing
             pages as text into sources/<provider>.txt (the URLs are in sources.json). Each page
             starts with a "=== URL ===" line; one that says FAILED couldn't be downloaded.
+
+            Tools: Read (use offset and limit for long files), Grep, Glob, WebFetch, WebSearch,
+            Edit and Write, plus the read-only shell commands cat, grep, head, tail, wc and ls.
+            No other shell commands or scripts are available, so don't try them.
 
             Do this:
             1. For each provider with rates, read sources/<provider>.txt. The files can be long:
@@ -81,6 +88,8 @@ jobs:
 
       - name: Commit
         id: commit
+        env:
+          PUSH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet -- prices.json; then
             echo "Nothing to publish."
@@ -95,7 +104,7 @@ jobs:
           else
             git commit -m "Update prices"
           fi
-          git push
+          git push "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       # The app reads https://imogenpro.com/catalog/prices.json, not this repo. (A push made with
