@@ -3,22 +3,37 @@
     "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
   ],
   "bfl": [
-    "https://bfl.ai/pricing"
+    "https://docs.bfl.ai/quick_start/pricing.md",
+    {
+      "url": "https://bfl.ai/pricing",
+      "scripts": true
+    }
   ],
   "byteplus": [
-    "https://docs.byteplus.com/en/docs/modelark/model-pricing"
+    "https://www.byteplus.com/api/doc/getDocDetail?LibraryCode=modelark&DocumentCode=model-pricing&type=online"
   ],
   "fal": [
-    "https://fal.ai/pricing"
+    "https://fal.ai/models/fal-ai/seedvr/upscale/image/llms.txt",
+    "https://fal.ai/models/fal-ai/seedvr/upscale/video/llms.txt",
+    "https://fal.ai/models/fal-ai/bytedance-upscaler/upscale/video/llms.txt",
+    "https://fal.ai/models/fal-ai/rife/video/llms.txt",
+    "https://fal.ai/models/fal-ai/film/video/llms.txt",
+    "https://fal.ai/models/topaz/upscale/image/precision/llms.txt",
+    "https://fal.ai/models/topaz/upscale/image/generative/llms.txt",
+    "https://fal.ai/models/topaz/upscale/image/creative/llms.txt",
+    "https://fal.ai/models/topaz/interpolate/video/llms.txt",
+    "https://fal.ai/models/topaz/upscale/video/generative/llms.txt",
+    "https://fal.ai/models/topaz/upscale/video/precision/llms.txt"
   ],
   "google": [
     "https://ai.google.dev/gemini-api/docs/pricing"
   ],
   "kling": [
-    "https://kling.ai/dev/pricing"
+    "https://kling.ai/document-api/pricing/base/video.md",
+    "https://kling.ai/document-api/pricing/base/image.md"
   ],
   "mediakit": [
-    "https://docs.byteplus.com/en/docs/byteplus-vod/ai-mediakit-pricing"
+    "https://www.byteplus.com/api/doc/getDocDetail?LibraryCode=byteplus-vod&DocumentCode=ai-mediakit-pricing&type=online"
   ],
   "minimax": [
     "https://platform.minimax.io/docs/guides/pricing-paygo"
@@ -30,6 +45,7 @@
     "https://www.recraft.ai/docs/api-reference/pricing"
   ],
   "stability": [
+    "https://api.stability.ai/v2alpha/openapi",
     "https://platform.stability.ai/pricing"
   ],
   "topaz": [

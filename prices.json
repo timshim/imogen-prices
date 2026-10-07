@@ -528,6 +528,24 @@
       "provider": "google",
       "unit": "perMillionTokens"
     },
+    "google/nano-banana-2.1.image-output": {
+      "label": "Image output tokens",
+      "model": "Nano Banana 2.1",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2.1.input": {
+      "label": "Input tokens (text + references)",
+      "model": "Nano Banana 2.1",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
+    "google/nano-banana-2.1.text-output": {
+      "label": "Text and thinking output tokens",
+      "model": "Nano Banana 2.1",
+      "provider": "google",
+      "unit": "perMillionTokens"
+    },
     "google/nano-banana-2.image-output": {
       "label": "Image output tokens",
       "model": "Nano Banana 2",
@@ -1205,6 +1223,9 @@
     "google/nano-banana-2-lite.image-output": 30,
     "google/nano-banana-2-lite.input": 0.25,
     "google/nano-banana-2-lite.text-output": 1.5,
+    "google/nano-banana-2.1.image-output": 30,
+    "google/nano-banana-2.1.input": 1.5,
+    "google/nano-banana-2.1.text-output": 7.5,
     "google/nano-banana-2.image-output": 60,
     "google/nano-banana-2.input": 0.5,
     "google/nano-banana-2.text-output": 3,

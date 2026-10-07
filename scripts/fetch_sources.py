@@ -11,6 +11,7 @@ Run from the repository root: python3 scripts/fetch_sources.py
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.request
 from html.parser import HTMLParser
@@ -76,9 +77,16 @@ def html_to_text(html, keep_scripts=False):
 
 def download(url):
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html,*/*"})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        charset = response.headers.get_content_charset() or "utf-8"
-        return response.read().decode(charset, errors="replace")
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            charset = response.headers.get_content_charset() or "utf-8"
+            return response.read().decode(charset, errors="replace")
+    except Exception:
+        # Some servers refuse older TLS stacks; curl usually has a newer one.
+        result = subprocess.run(["curl", "-fsSL", "--max-time", "30", "-A", USER_AGENT, url], capture_output=True)
+        if result.returncode != 0:
+            raise
+        return result.stdout.decode("utf-8", errors="replace")
 
 
 def main():

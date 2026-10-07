@@ -56,7 +56,10 @@ jobs:
             2. For every rate of that provider, find the current published price for exactly
                what the label and unit describe (same resolution, tier, audio on/off, per
                second vs per image, and so on). Convert to US dollars per the unit given.
-            3. Change a rate only when an official source clearly states a different price.
+            3. Use the regular list price. Ignore temporary promotions, launch discounts and
+               free trials. A rate may follow from an official formula or example on the page
+               (for example a 10-second job price ÷ 10 for a per-second rate).
+               Change a rate only when an official source clearly states a different price.
                If you can't find or verify a price, leave it unchanged. Never guess. Never add,
                remove or rename rates, and never change `details`, `pricingPages`, `updatedAt`
                or `version` (a later step sets the dates from your results).
