@@ -30,6 +30,9 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # The workflow's own token; without it the action asks GitHub for an OIDC token to use
+          # the Claude GitHub App, which this repo doesn't need.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: >-
             --allowedTools "WebFetch,WebSearch,Read,Edit,Write"
           prompt: |
